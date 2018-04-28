@@ -63,6 +63,52 @@ func firstNotRepeated(input: String) -> Character {
 }
 
 //firstNotRepeated(input: "abacabaabacaba")
+"""
+You are given an n x n 2D matrix that represents an image. Rotate the image by 90 degrees (clockwise).
+
+Example
+
+For a = [[1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]]
+
+the output should be
+
+rotateImage(a) = [[7, 4, 1],
+                 [8, 5, 2],
+                 [9, 6, 3]]
+"""
+
+func rotateImage(a: [[Int]]) -> [[Int]] {
+    var bottom: [Int] = []
+    var mid: [Int] = []
+    var top: [Int] = []
+    
+    for i in (0...a.count - 1).reversed() {
+        var temp = a[i]
+        bottom.append(temp[temp.count - 1])
+        temp.popLast()
+        mid.append(temp[temp.count - 1])
+        temp.popLast()
+        top.append(temp[temp.count - 1])
+    }
+    let back = [top,mid,bottom]
+    return (back)
+}
+
+rotateImage(a: [[1,2,3], [4,5,6], [7,8,9]])
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //: [Next](@next)
