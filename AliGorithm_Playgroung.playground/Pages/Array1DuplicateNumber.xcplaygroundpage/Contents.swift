@@ -87,16 +87,36 @@ func rotateImage(a: [[Int]]) -> [[Int]] {
     for i in (0...a.count - 1).reversed() {
         var temp = a[i]
         bottom.append(temp[temp.count - 1])
-        temp.popLast()
+        temp.removeLast()
         mid.append(temp[temp.count - 1])
-        temp.popLast()
+        temp.removeLast()
         top.append(temp[temp.count - 1])
     }
     let back = [top,mid,bottom]
     return (back)
 }
 
-rotateImage(a: [[1,2,3], [4,5,6], [7,8,9]])
+//rotateImage(a: [[1,2,3], [4,5,6], [7,8,9]])
+
+"""
+You have two integer arrays, a and b, and an integer target value v.
+Determine whether there is a pair of numbers, where one number is
+taken from a and the other from b, that can be added together
+to get a sum of v. Return true if such a pair exists, otherwise return false.
+
+Example
+
+For a = [1, 2, 3], b = [10, 20, 30, 40], and v = 42, the output should be
+sumOfTwo(a, b, v) = true
+
+"""
+
+func containsDuplicates(a: [Int]) -> Bool {
+    return !(Set(a).count == a.count)
+}
+// containsDuplicates(a: [1, 2, 3]) == false
+// containsDuplicates(a: [1, 2, 3, 4, 1]) == true
+
 
 
 
