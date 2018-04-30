@@ -20,6 +20,7 @@ func firstDuplicate(a: [Int]) -> Int {
     
     var seenDic: [Int:Bool] = [:]
     for i in a {
+        print(i)
         if seenDic[i] == nil {
             seenDic[i] = true
         } else {
@@ -110,7 +111,7 @@ containsDuplicates(a) = true.
 
 There are two 1s in the given array.
 
-For a = [3, 1], the output should be
+For b = [3, 1], the output should be
 containsDuplicates(a) = false.
 
 """
@@ -118,8 +119,42 @@ containsDuplicates(a) = false.
 func containsDuplicates(a: [Int]) -> Bool {
     return !(Set(a).count == a.count)
 }
-// containsDuplicates(a: [1, 2, 3]) == false
 // containsDuplicates(a: [1, 2, 3, 4, 1]) == true
+"""
+You have two integer arrays, a and b, and an integer target value v.
+Determine whether there is a pair of numbers, where one number is
+taken from a and the other from b, that can be added together to get a sum of v.
+Return true if such a pair exists, otherwise return false.
+
+Example
+
+For a = [1, 2, 3], b = [10, 20, 30, 40], and v = 42, the output should be
+sumOfTwo(a, b, v) = true.
+"""
+func sumOfTwo(a: [Int], b: [Int], v: Int) -> Bool {
+    let diff = Set(a.map { v - $0 })
+    return !diff.isDisjoint(with: b)
+}
+
+sumOfTwo(a: [1,2,3,4], b: [10,20,30,40], v: 42)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
