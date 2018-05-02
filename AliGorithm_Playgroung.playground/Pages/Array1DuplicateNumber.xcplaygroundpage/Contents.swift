@@ -136,10 +136,19 @@ func sumOfTwo(a: [Int], b: [Int], v: Int) -> Bool {
     return !diff.isDisjoint(with: b)
 }
 
-sumOfTwo(a: [1,2,3,4], b: [10,20,30,40], v: 42)
+//sumOfTwo(a: [1,2,3,4], b: [10,20,30,40], v: 42)
 
 
+"""
+Sum all the items inside the array and return as an Int
+input = [1,2,3,4,10,11]
+output = 31
+"""
+func simpleArraySum(ar: [Int]) -> Int {
+    return ar.reduce(0, +)
+}
 
+simpleArraySum(ar: [1,2,3,10,4,11])
 
 
 

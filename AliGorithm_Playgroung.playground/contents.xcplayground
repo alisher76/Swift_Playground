@@ -3,5 +3,6 @@
     <pages>
         <page name='Array1DuplicateNumber'/>
         <page name='BubbleSort'/>
+        <page name='Probablilty'/>
     </pages>
 </playground>
