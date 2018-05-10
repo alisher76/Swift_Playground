@@ -148,9 +148,7 @@ func simpleArraySum(ar: [Int]) -> Int {
     return ar.reduce(0, +)
 }
 
-simpleArraySum(ar: [1,2,3,10,4,55])
-
-
+//simpleArraySum(ar: [1,2,3,10,4,55])
 
 
 
