@@ -72,10 +72,32 @@ extension Array where Element: Comparable {
         }
         return back
     }
+    
+    func sortUsingInsertion2() -> [Element] {
+        guard count > 1 else { return self }
+        
+        var back = self
+        
+        for i in 1..<count {
+            var currentItemIndex = i
+            // Take a copy of the current item
+            let itemToPlace = back[currentItemIndex]
+            
+            // keep going around until we're at the start of the array or find an item that's greater or equal to us
+            while currentItemIndex > 0 && itemToPlace < back[currentItemIndex - 1] {
+                // move this item to the right
+                back[currentItemIndex] = back[currentItemIndex - 1]
+                currentItemIndex -= 1
+            }
+            // place our item into its newly sorted place
+            back[currentItemIndex] = itemToPlace
+        }
+        return back
+    }
 }
 
 var array1 = [12, 5, 4, 9, 3, 2, 1]
-print(array1.sortUsingInsertion())
+print(array1.sortUsingInsertion2())
 
 
 
