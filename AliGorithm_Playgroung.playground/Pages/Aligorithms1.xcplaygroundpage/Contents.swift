@@ -96,8 +96,10 @@ extension Array where Element: Comparable {
     }
 }
 
-var array1 = [12, 5, 4, 9, 3, 2, 1]
-print(array1.sortUsingInsertion2())
+//var array1 = [12, 5, 4, 9, 3, 2, 1]
+//print(array1.sortUsingInsertion2())
+var numbers = [1, 2, 3]
+numbers += [4]
 
 
 

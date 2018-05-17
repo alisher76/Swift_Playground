@@ -4,5 +4,6 @@
         <page name='CodingChallenges'/>
         <page name='Aligorithms1'/>
         <page name='Probablilty'/>
+        <page name='SwiftCodingConcepts'/>
     </pages>
 </playground>
