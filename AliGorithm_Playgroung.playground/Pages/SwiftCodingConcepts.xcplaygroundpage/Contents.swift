@@ -136,7 +136,26 @@ func reverseStringInput(input: String) -> String {
 reverseStringInput(input: "Swift Coding Challenges") == "tfiwS gnidoC segnellahC"
 
 
+"""
+Create a function that axxepts an array of unsorted number from 1..n where zero or more numbers might be missing and returns an array of missing numbers
 
+Sample:
+input:
+var testArray = Array(1...100)
+testArray.remove(at: 25)
+testArray.remove(at: 20)
+testArray.remove(at: 6)
+"""
+func findMissingNumbers(input: [Int]) -> [Int] {
+    let inputSet = Set(input)
+    let testSet = Set(1...100)
+    return Array(testSet.subtracting(inputSet)).sorted()
+}
+var testArray = Array(1...100)
+testArray.remove(at: 25)
+testArray.remove(at: 20)
+testArray.remove(at: 6)
+findMissingNumbers(input: testArray)
 
 
 //: [Next](@next)
