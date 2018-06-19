@@ -101,7 +101,14 @@ extension Array where Element: Comparable {
 var numbers = [1, 2, 3]
 numbers += [4]
 
-
+extension String {
+    func hasUniqueCharacters() -> Bool {
+        var uniqueChars = Set<Character>()
+        for ch in characters {
+            
+        }
+    }
+}
 
 
 

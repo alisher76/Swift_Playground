@@ -5,5 +5,8 @@
         <page name='Aligorithms1'/>
         <page name='Probablilty-Average'/>
         <page name='SwiftCodingConcepts'/>
+        <page name='TestingInPlayground'/>
+        <page name='StacksInSwift'/>
+        <page name='DesignInPlaygorund_01'/>
     </pages>
 </playground>
